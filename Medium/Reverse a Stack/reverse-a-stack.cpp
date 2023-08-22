@@ -10,15 +10,25 @@ using namespace std;
 
 class Solution{
 public:
-    void Reverse(stack<int> &St){
-        stack<int>s;
-        while(!St.empty())
-        {
-            int x = St.top();
-            s.push(x);
-            St.pop();
-        }
-      St=s;
+void insert(stack<int> &st,int val){
+    if(st.empty())
+    {
+        st.push(val);
+        return;
+    }
+    int t = st.top();
+    st.pop();
+    insert(st,val);
+    st.push(t);
+}
+    void Reverse(stack<int> &st){
+        if(st.empty())
+        return;
+        int t = st.top();
+       st.pop();
+        Reverse(st);
+         insert(st,t);
+     
     }
 };
 
