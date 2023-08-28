@@ -49,27 +49,23 @@ void printList(struct node *node)
 class Solution
 {
     public:
-  
     struct node *reverse (struct node *head, int k)
     { 
-  if (!head)
-        return NULL;
-        node* current = head;
-        node* next = NULL;
-        node* prev = NULL;
-        int count = 0;
-        
-         while (current != NULL && count < k) {
-            next = current->next;
-            current->next = prev;
-            prev = current;
-            current = next;
-            count++;
-        }
-        if (next != NULL)
-        head->next = reverse(next, k);
-        
-         return prev;
+    node *next=NULL;
+    node *prev=NULL;
+    node *curr=head;
+    int c=0;
+    while(curr!=NULL&&c<k)
+    {
+        next=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=next;
+        c++;
+    }
+    if(curr!=NULL)
+    head->next=reverse(next,c);
+    return prev;
     }
 };
 
