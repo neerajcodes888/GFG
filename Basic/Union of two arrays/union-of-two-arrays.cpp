@@ -11,12 +11,12 @@ class Solution{
     public:
     //Function to return the count of number of elements in union of two arrays.
     int doUnion(int a[], int n, int b[], int m)  {
-        unordered_map<int,int>mp;
-        for(int i=0;i<n;i++)
-        ++mp[a[i]];
+        vector<int>v(a,a+n);
         for(int i=0;i<m;i++)
-        ++mp[b[i]];
-        return mp.size();
+        v.push_back(b[i]);
+        sort(v.begin(),v.end());
+        return unique(v.begin(),v.end())-v.begin();
+        
     }
 };
 
