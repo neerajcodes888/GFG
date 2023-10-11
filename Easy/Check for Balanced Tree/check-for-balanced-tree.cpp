@@ -103,7 +103,8 @@ struct Node
 
 class Solution{
     public:
-    bool ans=true;
+    //Function to check whether a binary tree is balanced or not.
+ bool ans=true;
 int height(Node *root)
 {
     if(root==NULL)
