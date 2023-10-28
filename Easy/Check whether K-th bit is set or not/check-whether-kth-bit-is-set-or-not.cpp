@@ -15,7 +15,7 @@ class Solution
     // Function to check if Kth bit is set or not.
     bool checkKthBit(int n, int k)
     {
-        string s="";
+  string s="";
           for (int i = log(n)/log(2); i >= 0; i--) {
         int k = n >> i;
         if (k & 1)
@@ -23,7 +23,6 @@ class Solution
         else
             s+="0";
     }
-// cout<<s;
  return s[s.length()-k-1]=='1';
     }
 };
