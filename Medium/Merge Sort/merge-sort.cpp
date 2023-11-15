@@ -21,49 +21,45 @@ class Solution
     public:
     void merge(int arr[], int l, int m, int r)
     {
-     int nap1=m-l+1;
-     int nap2=r-m;
-     int *a=new int[nap1];
-     int *b=new int[nap2];
-     int index=l;
-     for(int i=0;i<nap1;i++)
-     {
-         a[i]=arr[index++];
-     }
-     index=m+1;
-     for(int i=0;i<nap2;i++)
-     {
-         b[i]=arr[index++];
-     }
-     index=l;
-     int i1=0,i2=0;
-     while(i1<nap1&&i2<nap2)
-     {
-         if(a[i1]<b[i2])
-         arr[index++]=a[i1++];
-         else
-         arr[index++]=b[i2++];
-     }
-     while(i1<nap1)
-     {
-         arr[index++]=a[i1++];
-     }
-     while(i2<nap2)
-     {
-         arr[index++]=b[i2++];
-     }
-     delete[] a;
-     delete[] b;
+         int nap1 = m-l+1;
+         int nap2 = r-m;
+         int *a = new int[nap1];
+         int *b = new int[nap2];
+         int index = l;
+         for(int i=0;i<nap1;i++)
+         {
+             a[i]=arr[index++];
+         }
+         index=m+1;
+         for(int i=0;i<nap2;i++)
+         {
+             b[i]=arr[index++];
+         }
+         index=l;
+         int x1=0,x2=0;
+         while(x1<nap1 && x2<nap2)
+         {
+             if(a[x1]<b[x2])
+             arr[index++]=a[x1++];
+             else
+             arr[index++]=b[x2++];
+         }
+         while(x1<nap1)
+         arr[index++]=a[x1++];
+         while(x2<nap2)
+         arr[index++]=b[x2++];
+         delete[] a;
+         delete[] b;
     }
     public:
     void mergeSort(int arr[], int l, int r)
     {
-         if(l>=r)
-         return;
-         int m = l+(r-l)/2;
-         mergeSort(arr,l,m);
-         mergeSort(arr,m+1,r);
-         merge(arr,l,m,r);
+        if(l>=r)
+        return;
+        int m = l+(r-l)/2;
+        mergeSort(arr,l,m);
+        mergeSort(arr,m+1,r);
+        merge(arr,l,m,r);
     }
 };
 
