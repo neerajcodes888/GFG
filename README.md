@@ -21,7 +21,7 @@ GeeksforGeeks is a platform that provides a variety of programming problems to e
 
 - C++
 - Python
-- ...
+- Java
 
 
 ## Directory Structure
