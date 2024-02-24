@@ -1,4 +1,9 @@
 # GFG
+
+
+![GFG](https://socialify.git.ci/neerajcodes888/GFG/image?description=1&descriptionEditable=Welcome%20to%20my%20GeeksforGeeks%20Data%20Structures%20and%20Algorithms%20(DSA)%20solutions%20repository!%20%F0%9F%8C%9F%20Explore%20a%20diverse%20range%20of%20solutions%20to%20GFG%20%20problems&font=Rokkitt&language=1&name=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)
+
+
 This repository contains my solutions to various GeeksforGeeks DSA problems. The solutions are organized by the level of difficulty
 # GeeksforGeeks Solutions
 
