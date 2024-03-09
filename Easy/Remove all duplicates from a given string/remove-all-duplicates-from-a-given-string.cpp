@@ -9,18 +9,17 @@ using namespace std;
 class Solution{
 public:
 	string removeDuplicates(string str) {
-	  string ans;
-	unordered_set<char>s;
-	  for(int i=0;i<str.size();i++)
-	  {
-	    if(s.find(str[i])==s.end())
-	    {
-	        ans+=str[i];
-	        s.insert(str[i]);
-	    }
-	  }
-	 
-	  return ans;
+string s="";
+unordered_set<int>st;
+for(int i=0;i<str.size();i++){
+    if(st.find(str[i])==st.end())
+{
+            s+=str[i];
+        st.insert(str[i]);
+}
+    
+}
+return s;
 	}
 };
 
